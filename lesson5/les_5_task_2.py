@@ -100,6 +100,13 @@ def mult_ful(aa, bb):
 
 first = str(input('Введите первое число >>> ')).upper()
 second = str(input('Введите второе число >>> ')).upper()
-
-print(sum_full(first, second))
-print(mult_ful(first, second))
+sum_res = sum_full(first, second)
+s = ''
+while len(sum_res) > 0:
+    s = s + sum_res.popleft()
+print('Результат сложения чисел:', s)
+mult_res = mult_ful(first, second)
+s = ''
+while len(mult_res) > 0:
+    s = s + mult_res.popleft()
+print('Результат умножения чисел:', s)
