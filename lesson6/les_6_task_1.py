@@ -9,7 +9,6 @@
 #   3. Собственного класса
 
 import sys
-import ctypes
 from collections import namedtuple
 
 def show_size(x, level=0):
