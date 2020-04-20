@@ -99,7 +99,7 @@ print('*' * 60)
 
 # При любом из вариантов хранения непосредственно данные занимает одинаковый размер в памяти.
 # Но при использовании третьего вариант сам объект, хранящий ссылки и описания,
-# занимает в памяти минимальный размер
+# занимает в памяти минимальный размер вне зависмости от операционной системы
 # ************************************************************
 # 3.7.4 (v3.7.4:e09359112e, Jul  8 2019, 14:54:52)
 # [Clang 6.0 (clang-600.0.57)] darwin
@@ -124,6 +124,37 @@ print('*' * 60)
 # ************************************************************
 # Третий вариант:
 #  type= <class '__main__.Organization'>, size= 64, object= <__main__.Organization object at 0x107c9dfd0>
+#  type= <class 'str'>, size= 53, object= acme
+#  type= <class 'int'>, size= 28, object= 1
+#  type= <class 'int'>, size= 28, object= 2
+#  type= <class 'int'>, size= 28, object= 3
+#  type= <class 'int'>, size= 28, object= 4
+#  type= <class 'float'>, size= 24, object= 2.5
+# ************************************************************
+# ************************************************************
+# 3.6.10 (default, Dec 19 2019, 23:04:32)
+# [GCC 5.4.0 20160609] linux
+# ************************************************************
+# Первый вариант:
+#  type= <class '__main__.New_Org'>, size= 96, object= New_Org(name='acme', quarter1=1, quarter2=2, quarter3=3, quarter4=4, average=2.5)
+#      type= <class 'str'>, size= 53, object= acme
+#      type= <class 'int'>, size= 28, object= 1
+#      type= <class 'int'>, size= 28, object= 2
+#      type= <class 'int'>, size= 28, object= 3
+#      type= <class 'int'>, size= 28, object= 4
+#      type= <class 'float'>, size= 24, object= 2.5
+# ************************************************************
+# Второй вариант:
+#  type= <class 'list'>, size= 112, object= ['acme', 1, 2, 3, 4, 2.5]
+#      type= <class 'str'>, size= 53, object= acme
+#      type= <class 'int'>, size= 28, object= 1
+#      type= <class 'int'>, size= 28, object= 2
+#      type= <class 'int'>, size= 28, object= 3
+#      type= <class 'int'>, size= 28, object= 4
+#      type= <class 'float'>, size= 24, object= 2.5
+# ************************************************************
+# Третий вариант:
+#  type= <class '__main__.Organization'>, size= 56, object= <__main__.Organization object at 0x7f4cb2225e80>
 #  type= <class 'str'>, size= 53, object= acme
 #  type= <class 'int'>, size= 28, object= 1
 #  type= <class 'int'>, size= 28, object= 2
