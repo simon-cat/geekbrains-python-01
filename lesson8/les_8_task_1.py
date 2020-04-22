@@ -4,6 +4,8 @@
 # 
 # Примечание. Решите задачу при помощи построения графа.
 
+# строка для теста pull
+
 from collections import deque
 
 def make_graph(array, count):
